@@ -1,12 +1,17 @@
-body {
-  font-family: Arial;
-  background: #f2f2f2;
-  padding: 40px;
-}
+<body>
 
-form {
-  background: white;
-  padding: 20px;
-  width: 320px;
-  border-radius: 6px;
-}
+  <div class="container">
+    <h2>TOPSIS Web Service</h2>
+
+    <form id="topsisForm" enctype="multipart/form-data">
+      <input type="file" name="file" required>
+      <input type="text" name="weights" placeholder="1,1,1,1" required>
+      <input type="text" name="impacts" placeholder="+,+,-,+" required>
+      <input type="email" name="email" placeholder="example@gmail.com" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="msg"></p>
+  </div>
+
+</body>
