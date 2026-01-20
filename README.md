@@ -108,8 +108,8 @@ Email: pgarg7_be23@thapar.edu
 ## Links
 
 - [PyPI](https://pypi.org/project/Topsis-Pratham-102303052/)
-- [GitHub](https://github.com/prathamgarg/topsis-package)
-- [Documentation](https://github.com/prathamgarg/topsis-package#readme)
+- [GitHub](https://github.com/prathamgarg1103/Topsis-Pratham-102303052)
+
 
 ## Contributing
 
