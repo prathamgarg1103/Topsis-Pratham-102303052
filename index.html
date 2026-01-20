@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>TOPSIS Web Service</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,16 +11,24 @@
     <h2>TOPSIS Web Service</h2>
 
     <form id="topsisForm" enctype="multipart/form-data">
+      <label>CSV File</label>
       <input type="file" name="file" required>
+
+      <label>Weights</label>
       <input type="text" name="weights" placeholder="1,1,1,1" required>
+
+      <label>Impacts</label>
       <input type="text" name="impacts" placeholder="+,+,-,+" required>
-      <input type="email" name="email" placeholder="example@gmail.com" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
       <button type="submit">Submit</button>
     </form>
 
     <p id="msg"></p>
   </div>
 
+  <script src="script.js"></script>
 </body>
-
 </html>
