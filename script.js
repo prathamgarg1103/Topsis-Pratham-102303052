@@ -17,7 +17,7 @@ const emailError = document.getElementById("emailError");
 // Backend URL - UPDATE THIS with your Render backend URL after deployment
 // For local development: "http://localhost:5000/topsis"
 // For production: "https://your-app-name.onrender.com/topsis"
-const BACKEND_URL = "https://topsis-backend.onrender.com/topsis";
+const BACKEND_URL = "https://topsis-pratham-102303052.onrender.com/topsis";
 
 // File input display update
 fileInput.addEventListener("change", (e) => {
