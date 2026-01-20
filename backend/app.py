@@ -6,16 +6,14 @@ CORS(app)
 
 @app.route("/topsis", methods=["GET", "POST"])
 def topsis_api():
+    print(">>> Request received")
+
     if request.method == "GET":
-        return jsonify({"status": "TOPSIS API running"})
+        print(">>> GET request")
+        return jsonify({"status": "API running"})
 
-    # POST request
-    file = request.files.get("file")
-    weights = request.form.get("weights")
-    impacts = request.form.get("impacts")
-    email = request.form.get("email")
+    print(">>> POST request")
+    print("Files:", request.files)
+    print("Form:", request.form)
 
-    if not file or not weights or not impacts or not email:
-        return jsonify({"message": "Missing input"}), 400
-
-    return jsonify({"message": "File received successfully"})
+    return jsonify({"message": "POST reached backend"})
