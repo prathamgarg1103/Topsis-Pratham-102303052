@@ -1,7 +1,7 @@
 const form = document.getElementById("topsisForm");
 const msg = document.getElementById("msg");
 
-const BACKEND_URL = "https://topsis-pratham-102303052.onrender.com";
+const BACKEND_URL = "const BACKEND_URL = "const BACKEND_URL = "https://topsis-pratham-102303052.onrender.com/topsis";
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
