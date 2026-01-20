@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="Topsis-Pratham-102303052",
-    version="1.0.0",
+    version="1.0.1",
     author="Pratham Garg",
     author_email="pgarg7_be23@thapar.edu",
     description="A Python package for TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution) analysis",

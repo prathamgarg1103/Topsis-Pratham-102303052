@@ -12,8 +12,8 @@ from email.mime.base import MIMEBase
 from email import encoders
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Load environment variables from .env file
+load_dotenv(os.path.join(os.path.dirname(__file__), '.env'))
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes

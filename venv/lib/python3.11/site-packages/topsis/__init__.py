@@ -1,4 +1,0 @@
-from .topsis import main, topsis
-
-__version__ = "1.0.0"
-__all__ = ['main', 'topsis']
