@@ -4,28 +4,18 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/")
-def home():
-    return "TOPSIS Backend Running"
-
-@app.route("/topsis", methods=["POST"])
+@app.route("/topsis", methods=["GET", "POST"])
 def topsis_api():
+    if request.method == "GET":
+        return jsonify({"status": "TOPSIS API running"})
+
+    # POST request
     file = request.files.get("file")
     weights = request.form.get("weights")
     impacts = request.form.get("impacts")
     email = request.form.get("email")
 
-    # call your TOPSIS logic here
+    if not file or not weights or not impacts or not email:
+        return jsonify({"message": "Missing input"}), 400
 
-    return jsonify({
-        "message": "Result will be sent to your email"
-    })
-
-if __name__ == "__main__":
-    app.run()
-@app.route("/topsis", methods=["GET", "POST"])
-def topsis_api():
-    if request.method == "GET":
-        return jsonify({"status": "TOPSIS API is running"})
-    
-    # existing POST logic below
+    return jsonify({"message": "File received successfully"})
