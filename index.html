@@ -2,31 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TOPSIS Web Service - Multi-Criteria Decision Making Analysis Tool">
   <title>TOPSIS Web Service</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="background-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
 
   <div class="container">
-    <h2>TOPSIS Web Service</h2>
+    <div class="header">
+      <h1>TOPSIS Analysis</h1>
+      <p class="subtitle">Multi-Criteria Decision Making Tool</p>
+    </div>
 
     <form id="topsisForm" enctype="multipart/form-data">
-      <label>CSV File</label>
-      <input type="file" name="file" required>
+      <div class="form-group">
+        <label for="fileInput">File Name</label>
+        <div class="file-input-wrapper">
+          <input type="file" id="fileInput" name="file" accept=".csv" required>
+          <div class="file-display">
+            <span id="fileName">Browse File....</span>
+            <button type="button" class="browse-btn">Browse</button>
+          </div>
+        </div>
+        <span class="hint">Upload a CSV file with numeric data columns</span>
+      </div>
 
-      <label>Weights</label>
-      <input type="text" name="weights" placeholder="1,1,1,1" required>
+      <div class="form-group">
+        <label for="weightsInput">Weights</label>
+        <input type="text" id="weightsInput" name="weights" placeholder="1,1,1,1,1" required>
+        <span class="hint">Comma-separated numeric values (e.g., 1,1,1,1,1)</span>
+        <span class="error" id="weightsError"></span>
+      </div>
 
-      <label>Impacts</label>
-      <input type="text" name="impacts" placeholder="+,+,-,+" required>
+      <div class="form-group">
+        <label for="impactsInput">Impacts</label>
+        <input type="text" id="impactsInput" name="impacts" placeholder="+,+,-,+,+" required>
+        <span class="hint">Comma-separated + (benefit) or - (cost) values</span>
+        <span class="error" id="impactsError"></span>
+      </div>
 
-      <label>Email</label>
-      <input type="email" name="email" required>
+      <div class="form-group">
+        <label for="emailInput">Email Id</label>
+        <input type="email" id="emailInput" name="email" placeholder="example@gmail.com" required>
+        <span class="hint">Results will be sent to this email address</span>
+        <span class="error" id="emailError"></span>
+      </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit" id="submitBtn" class="submit-btn">
+        <span class="btn-text">Submit</span>
+        <span class="btn-loader"></span>
+      </button>
     </form>
 
-    <p id="msg"></p>
+    <div id="messageBox" class="message-box">
+      <p id="msg"></p>
+    </div>
+
+    <div class="requirements">
+      <h3>Requirements</h3>
+      <ul>
+        <li>Input file must be a CSV with numeric data columns</li>
+        <li>Number of weights must equal number of impacts</li>
+        <li>Impacts must be either + (benefit) or - (cost)</li>
+        <li>Weights and impacts must be comma-separated</li>
+        <li>Valid email format required</li>
+      </ul>
+    </div>
   </div>
 
   <script src="script.js"></script>
