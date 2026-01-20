@@ -23,3 +23,9 @@ def topsis_api():
 
 if __name__ == "__main__":
     app.run()
+@app.route("/topsis", methods=["GET", "POST"])
+def topsis_api():
+    if request.method == "GET":
+        return jsonify({"status": "TOPSIS API is running"})
+    
+    # existing POST logic below
