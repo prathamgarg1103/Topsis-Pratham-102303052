@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
-import pandas as pd
-import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def home():
@@ -15,7 +15,11 @@ def topsis_api():
     impacts = request.form.get("impacts")
     email = request.form.get("email")
 
-    if not file or not weights or not impacts or not email:
-        return jsonify({"message": "Missing input"}), 400
+    # call your TOPSIS logic here
 
-    return jsonify({"message": "Backend reached successfully"})
+    return jsonify({
+        "message": "Result will be sent to your email"
+    })
+
+if __name__ == "__main__":
+    app.run()
