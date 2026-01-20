@@ -110,18 +110,6 @@ Email: pgarg7_be23@thapar.edu
 - [PyPI](https://pypi.org/project/Topsis-Pratham-102303052/)
 - [GitHub](https://github.com/prathamgarg1103/Topsis-Pratham-102303052)
 
-
-## Mail Service Configuration
-
-To enable automated email delivery of TOPSIS results:
-
-1.  Navigate to the `backend/` directory.
-2.  Open the `.env` file (created from `.env.example`).
-3.  Fill in your SMTP credentials:
-    - `SENDER_EMAIL`: Your Gmail or SMTP email address.
-    - `SENDER_PASSWORD`: Your SMTP password or [Gmail App Password](https://myaccount.google.com/apppasswords).
-4.  Restart the backend server.
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
